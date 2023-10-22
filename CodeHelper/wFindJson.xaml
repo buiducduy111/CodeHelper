@@ -1,0 +1,30 @@
+﻿<Window x:Class="CodeHelper.wFindJson"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CodeHelper"
+        mc:Ignorable="d"
+        Title="Create C# code - Find Json" Height="600" Width="1200" FontFamily="Tahoma" FontSize="13" WindowStartupLocation="CenterScreen">
+    <DockPanel>
+        <Rectangle Height="2" DockPanel.Dock="Top" StrokeThickness="0" Fill="#FFFF5D00"></Rectangle>
+        <Grid>
+            <Button x:Name="btnFind" Content=">>" HorizontalAlignment="Left" Height="45" Margin="448,165,0,0" VerticalAlignment="Top" Width="66" BorderBrush="Gainsboro" Background="#FF0385F1" Foreground="White" Click="btnFind_Click"/>
+            <RichTextBox x:Name="rtbInput" Margin="10,10,0,10" HorizontalAlignment="Left" Width="433">
+                <FlowDocument LineHeight="5">
+                    <Paragraph>
+                        <Run Text=""/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+            <RichTextBox x:Name="rtbOutput" Margin="519,10,10,10">
+                <FlowDocument LineHeight="5">
+                    <Paragraph>
+                        <Run Text=""/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+
+        </Grid>
+    </DockPanel>
+</Window>

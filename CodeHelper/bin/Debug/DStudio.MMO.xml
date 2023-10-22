@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DStudio.MMO</name>
+    </assembly>
+    <members>
+        <member name="T:DStudio.MMO.HtmlReader">
+            <summary>
+            Html Reader class
+            </summary>
+        </member>
+        <member name="M:DStudio.MMO.HtmlReader.ReadByKeyword(System.String,System.String,System.String,System.Int32@)">
+            <summary>
+            Read a substring from a start and end key
+            </summary>
+            <param name="htmlText">Html Text</param>
+            <param name="startKey">Start key string</param>
+            <param name="endKey">End key string</param>
+            <param name="startIndex">Start index will be set to be next if success</param>
+            <returns></returns>
+        </member>
+        <member name="M:DStudio.MMO.HtmlReader.ReadByKeyword(System.String,System.String,System.String)">
+            <summary>
+            Read a substring from a start and end key
+            </summary>
+            <param name="htmlText">Html Text</param>
+            <param name="startKey">Start key string</param>
+            <param name="endKey">End key string</param>
+            <returns></returns>
+        </member>
+        <member name="M:DStudio.MMO.HtmlReader.GetLinkATag(System.String,System.String,System.String,System.String)">
+            <summary>
+            Get all the href from a tag
+            </summary>
+            <param name="html">Origin Html</param>
+            <param name="prefixUrl">Prefix Url. Ex: https://store.com/products/ </param>
+            <param name="hrefStartKey">Href start. Normaly : href="  or href = ' ...</param>
+            <param name="hrefEndKey">Href end. Normaly: " or '</param>
+            <returns></returns>
+        </member>
+        <member name="M:DStudio.MMO.HtmlReader.RemoveAllHtmlTag(System.String)">
+            <summary>
+            Remove a html-tag. 
+            Get text only
+            </summary>
+            <param name="html">HTML TEXT</param>
+            <returns></returns>
+        </member>
+        <member name="M:DStudio.MMO.HtmlReader.RemoveHtmlComment(System.String)">
+            <summary>
+            Remove all comment of html
+            </summary>
+            <param name="html"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DStudio.MMO.HtmlReader.GetFullTagContainerHtml(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Get full html (includes childrent node) of a tag container
+            This code will stop if total startKey equals total endKey
+            </summary>
+            <param name="html">Html text</param>
+            <param name="startKey">Start tag key. Ex: div</param>
+            <param name="endKey">End tag key: Ex : /div</param>
+            <param name="startIndex">Start Index</param>
+            <param name="firstKeyLength">First key length (to define where code get sub html)</param>
+            <returns></returns>
+        </member>
+        <member name="T:DStudio.MMO.Ini">
+            <summary>
+            Ini IO
+            </summary>
+        </member>
+        <member name="P:DStudio.MMO.Ini.fileName">
+            <summary>
+            File location
+            </summary>
+        </member>
+        <member name="M:DStudio.MMO.Ini.#ctor(System.String)">
+            <summary>
+            Define the file
+            </summary>
+            <param name="fileName">File location</param>
+        </member>
+        <member name="M:DStudio.MMO.Ini.Read(System.String,System.String,System.String)">
+            <summary> 
+            Read a key
+            </summary>
+            <param name="section">Section</param>
+            <param name="key">Key</param>
+            <param name="defaultResult">Default result if no data return</param>
+            <returns></returns>
+        </member>
+        <member name="M:DStudio.MMO.Ini.Write(System.String,System.String,System.String)">
+            <summary>
+            Write
+            </summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:DStudio.MMO.Ini.ReadSections">
+            <summary> 
+            Read all sections
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DStudio.MMO.Ini.ReadKeys(System.String)">
+            <summary>
+            Read all keys in section
+            </summary>
+            <param name="section"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DStudio.MMO.Md5">
+            <summary>
+            MD5
+            </summary>
+        </member>
+        <member name="M:DStudio.MMO.Md5.GetFromString(System.String)">
+            <summary> 
+            Get MD5 from a string
+            </summary>
+            <param name="text">string</param>
+            <returns></returns>
+        </member>
+        <member name="M:DStudio.MMO.Md5.GetFromFile(System.String)">
+            <summary>
+            Get MD5 from file
+            </summary>
+            <param name="fileName">File location</param>
+            <returns></returns>
+        </member>
+        <member name="T:DStudio.MMO.Encrypter">
+            <summary>
+            Encrypt manager
+            </summary>
+        </member>
+        <member name="M:DStudio.MMO.Encrypter.Encrypt(System.String,System.String)">
+            <summary>
+            Encrypt a string
+            </summary>
+            <param name="text">Input text</param>
+            <param name="key">Password</param>
+            <returns></returns>
+        </member>
+        <member name="M:DStudio.MMO.Encrypter.Decrypt(System.String,System.String)">
+            <summary>
+            Decrypt a text
+            </summary>
+            <param name="text">Input text</param>
+            <param name="key">Password</param>
+            <returns></returns>
+        </member>
+        <member name="T:DStudio.MMO.AdvanceRequest">
+            <summary>
+            Advance Request
+            </summary>
+        </member>
+        <member name="M:DStudio.MMO.AdvanceRequest.GetResponse(System.Net.HttpWebRequest)">
+            <summary>
+            Get response from a request.
+            Return 'error - Message' when reviced an error
+            </summary>
+            <param name="request">HttpWebRequest</param>
+            <returns></returns>
+        </member>
+        <member name="T:DStudio.MMO.NumberDetector">
+            <summary>
+            Detect a number in a string
+            </summary>
+        </member>
+        <member name="M:DStudio.MMO.NumberDetector.DoubleDetected(System.String)">
+            <summary>
+            Detect a double in a string
+            Ex: US $3.99 => 3.99
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DStudio.MMO.NumberDetector.Int32Detected(System.String)">
+            <summary>
+            Detect an int in a string
+            Ex: 1PC => 1
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DStudio.MMO.Support">
+            <summary>
+            Some helpful function
+            </summary>
+        </member>
+        <member name="M:DStudio.MMO.Support.GetAllowedFileName(System.String)">
+            <summary>
+            Get allowed file name from a string
+            Ex: 'Hello?/ world' is a unavaiable file name => Hello world
+            </summary>
+            <param name="name">Filename</param>
+            <returns></returns>
+        </member>
+        <member name="M:DStudio.MMO.Support.GetDomain(System.String)">
+            <summary>
+            Get domain name from url
+            Ex: https://amazon.com/dichvucodethue => https://amazon.com
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DStudio.MMO.UrlEncoder">
+            <summary>
+            Convert a text to Url format
+            </summary>
+        </member>
+        <member name="F:DStudio.MMO.UrlEncoder.vnChar">
+            <summary>
+            VN Characters list
+            </summary>
+        </member>
+        <member name="F:DStudio.MMO.UrlEncoder.replaceChar">
+            <summary>
+            Replace characters
+            </summary>
+        </member>
+        <member name="M:DStudio.MMO.UrlEncoder.Convert(System.String)">
+            <summary>
+            Convert method
+            </summary>
+            <param name="s">Vietnamese Text</param>
+            <returns></returns>
+        </member>
+        <member name="M:DStudio.MMO.UrlEncoder.getReplaceChar(System.Char)">
+            <summary>
+            Get a replace char
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

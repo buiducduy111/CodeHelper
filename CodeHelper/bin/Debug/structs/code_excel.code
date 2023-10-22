@@ -1,0 +1,21 @@
+﻿	public static void ExportTemplate(string outputFile, List<DataModel> items)
+	{
+		Workbook wb = new Workbook();
+		Worksheet ws = wb.Worksheets[0];
+		Ini ini = new Ini("configs\\fixed_output.ini");
+		int row = 1;
+
+		// Fill title
+@code_title
+		row++;
+
+		// Fill data
+		foreach (DataModel item in items)
+		{
+@code_items
+
+			row++;
+		}
+
+		wb.Save(outputFile);
+	}

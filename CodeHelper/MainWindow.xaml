@@ -1,0 +1,17 @@
+﻿<Window x:Class="CodeHelper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CodeHelper"
+        mc:Ignorable="d"
+        Title="Code Helper" Height="333.117" Width="800" FontFamily="Tahoma" WindowStartupLocation="CenterScreen">
+    <DockPanel>
+        <Rectangle Height="2" DockPanel.Dock="Top" StrokeThickness="0" Fill="#FFFF5D00"></Rectangle>
+        <Grid>
+            <Label Content="CHỌN TOOL" Margin="10,58,10,0" VerticalAlignment="Top" FontSize="30" HorizontalContentAlignment="Center"/>
+            <ComboBox x:Name="cboTool" FontSize="22" VerticalContentAlignment="Center" HorizontalAlignment="Center" Height="54" Margin="0,129,0,0" VerticalAlignment="Top" Width="308" SelectionChanged="cboTool_SelectionChanged"/>
+
+        </Grid>
+    </DockPanel>
+</Window>
