@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,7 @@ namespace CodeHelper
             cboTool.Items.Add("Xóa bin c# project");
             cboTool.Items.Add("Code search");
             cboTool.Items.Add("Đảo code = trên dòng");
+            cboTool.Items.Add("Patch undetected chromedrivers");
             cboTool.SelectedIndex = 0;
         }
 
@@ -49,6 +51,9 @@ namespace CodeHelper
 
             if (cboTool.SelectedIndex == 5)
                 new wReverseCode().Show();
+
+            if (cboTool.SelectedIndex == 6)
+                Process.Start(AppDomain.CurrentDomain.BaseDirectory + "py\\undetectedchromedriver_patch");
         }
     }
 }

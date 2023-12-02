@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-E:\code\csharp\projects\softs\CodeHelper\CodeHelper\obj\Debug\
+D:\code\tools\CodeHelper\CodeHelper\obj\Debug\
 CodeHelper
 none
 false
 DEBUG;TRACE
-E:\code\csharp\projects\softs\CodeHelper\CodeHelper\App.xaml
+D:\code\tools\CodeHelper\CodeHelper\App.xaml
 6-1704729659
 
-11447270337
-17-94305405
+11-1431558454
+17328276275
 MainWindow.xaml;wCodeSearch.xaml;wCreateCodeForExportExcel.xaml;wFindJson.xaml;wRemoveBin.xaml;wReverseCode.xaml;
 
 True
