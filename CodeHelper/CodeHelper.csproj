@@ -47,8 +47,14 @@
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Ookii.Dialogs.Wpf, Version=5.0.0.0, Culture=neutral, PublicKeyToken=66aa232afad40158, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ookii.Dialogs.Wpf.5.0.1\lib\net462\Ookii.Dialogs.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,8 +77,14 @@
     <Compile Include="wCodeSearch.xaml.cs">
       <DependentUpon>wCodeSearch.xaml</DependentUpon>
     </Compile>
+    <Compile Include="wConvertComunityMVVMToReactiveUIFody.xaml.cs">
+      <DependentUpon>wConvertComunityMVVMToReactiveUIFody.xaml</DependentUpon>
+    </Compile>
     <Compile Include="wCreateCodeForExportExcel.xaml.cs">
       <DependentUpon>wCreateCodeForExportExcel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wFindDiffFiles.xaml.cs">
+      <DependentUpon>wFindDiffFiles.xaml</DependentUpon>
     </Compile>
     <Compile Include="wFindJson.xaml.cs">
       <DependentUpon>wFindJson.xaml</DependentUpon>
@@ -99,7 +111,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="wConvertComunityMVVMToReactiveUIFody.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="wCreateCodeForExportExcel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wFindDiffFiles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

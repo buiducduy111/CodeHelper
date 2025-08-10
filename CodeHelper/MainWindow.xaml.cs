@@ -32,6 +32,10 @@ namespace CodeHelper
             cboTool.Items.Add("Code search");
             cboTool.Items.Add("Đảo code = trên dòng");
             cboTool.Items.Add("Patch undetected chromedrivers");
+            cboTool.Items.Add("Release tool");
+            cboTool.Items.Add("So sánh file khác giữa 2 folder");
+            cboTool.Items.Add("Convert community.mvvm -> reactiveUI");
+
             cboTool.SelectedIndex = 0;
         }
 
@@ -54,6 +58,37 @@ namespace CodeHelper
 
             if (cboTool.SelectedIndex == 6)
                 Process.Start(AppDomain.CurrentDomain.BaseDirectory + "py\\undetectedchromedriver_patch");
+
+            if (cboTool.SelectedIndex == 7)
+            {
+                Ookii.Dialogs.Wpf.VistaFolderBrowserDialog dialog = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog();
+                if (dialog.ShowDialog() == true)
+                    releaseTool(dialog.SelectedPath);
+            }
+
+            if (cboTool.SelectedIndex == 8)
+            {
+                wFindDiffFiles w = new wFindDiffFiles();
+                w.Show();
+            }
+
+            if (cboTool.SelectedIndex == 9)
+            {
+                wConvertComunityMVVMToReactiveUIFody w = new wConvertComunityMVVMToReactiveUIFody();
+                w.Show();
+            }
+        }
+
+        private void releaseTool(string folder)
+        {
+            string[] files = System.IO.Directory.GetFiles(folder);
+            foreach (string file in files)
+            {
+                string ext = System.IO.Path.GetExtension(file)?.ToLower();
+                if (ext == ".pdb" || ext == ".xml")
+                    System.IO.File.Delete(file);
+            }
+            MessageBox.Show("DONE");
         }
     }
 }

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\code\tools\CodeHelper\CodeHelper\obj\Debug\
+F:\code\tools\CodeHelper\CodeHelper\obj\Debug\
 CodeHelper
 none
 false
 DEBUG;TRACE
-D:\code\tools\CodeHelper\CodeHelper\App.xaml
-6-1704729659
+F:\code\tools\CodeHelper\CodeHelper\App.xaml
+81092157117
 
-11-1431558454
-17328276275
-MainWindow.xaml;wCodeSearch.xaml;wCreateCodeForExportExcel.xaml;wFindJson.xaml;wRemoveBin.xaml;wReverseCode.xaml;
+131483052770
+21-153640259
+MainWindow.xaml;wCodeSearch.xaml;wConvertComunityMVVMToReactiveUIFody.xaml;wCreateCodeForExportExcel.xaml;wFindDiffFiles.xaml;wFindJson.xaml;wRemoveBin.xaml;wReverseCode.xaml;
 
 True
 
